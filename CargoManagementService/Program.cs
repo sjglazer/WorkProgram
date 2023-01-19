@@ -2,11 +2,12 @@
 using CargoManagementService.Helpers;
 using CargoManagementService.Services;
 using CargoManagementService.Enums;
+using CargoManagementService.Models;
 
 
 // Please Note:
 // For the sake of simplicity (and time) I did not code around future probable use cases such as:
-// Loading multiple orders at once, varied order input streams, order wieght restrictions, contraband orders,
+// Loading multiple orders at once, varied order input streams, order weight restrictions, contraband orders,
 // order cancellation, varied max cargo limits, etc
 // I tried to keep the code simple and concise :)
 
@@ -57,19 +58,35 @@ Console.WriteLine();
 Console.WriteLine("Flight itinerary end");
 
 // User Story #2 use input file to load cargo onto most recent flight avaialble
-//var orders = FileReader.GetOrders("coding-assigment-orders.json");
 
-//foreach(var order in orders )
-//{
-//    flightManger.LoadBox(order);
-//}
+// get order from file
+var orders = FileReader.GetOrders("coding-assigment-orders.json");
 
-//var loadedOrders = flightManger.GetOrderedFlights();
-//foreach (var flight in flights)
-//{
-//    var output = $"Order: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
-//    Console.WriteLine(output);
-//}
+//load each or on the earliest flight available
+var ordersArray = orders as Order[] ?? orders.ToArray();
+foreach (var order in ordersArray)
+{
+    flightManger.LoadBox(order);
+}
+
+// print out order information
+
+Console.WriteLine("Order summary start:");
+Console.WriteLine();
+foreach (var ordr in ordersArray)
+{
+    // Please note the orders with destination YYE
+    // ex: "order-049" don't show up as unscheduled orders
+    // because I filter them out during the order validation 
+    // process
+    var order = flightManger.GetScheduledOrder(ordr);
+    Console.WriteLine(order.WasLoaded
+        ? order.ToString() 
+        : $"order: {ordr.Name}, flightNumber: not scheduled");
+}
+Console.WriteLine();
+Console.WriteLine("Order summary end");
+
 
 
 

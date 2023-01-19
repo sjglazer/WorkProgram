@@ -8,6 +8,8 @@ namespace CargoManagementService.Interfaces
         IEnumerable<IFlight> GetOrderedFlights();
 
         void LoadBox(Order order);
-      
+
+        ScheduledOrder GetScheduledOrder(Order order);
+
     }
 }

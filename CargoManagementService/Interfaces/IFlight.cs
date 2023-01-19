@@ -11,7 +11,7 @@ namespace CargoManagementService.Interfaces
         AirportEnum GetDepartureLocation();
         AirportEnum GetArrivalLocation();
         DayEnum GetDayEnum();
-        List<Order> GetOrders();
         DateTime GetDepartureTime();
+        bool HasOrder(Order order);
     }
 }

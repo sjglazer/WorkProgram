@@ -69,12 +69,18 @@ namespace CargoManagementService.Services
 
         public List<Order> GetOrders()
         {
-            return _orders.OrderBy(order => order.Destination).ToList();
+            return _orders.OrderBy(order => order.Name).ToList();
         }
 
         public DateTime GetDepartureTime()
         {
             return DepartureTime;
+        }
+
+        public bool HasOrder(Order order)
+        {
+            return _orders.Any(currentOrder =>
+                string.Equals(currentOrder.Name, order.Name, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
