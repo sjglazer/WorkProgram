@@ -1,0 +1,16 @@
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\CargoManagementService.exe
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\CargoManagementService.deps.json
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\CargoManagementService.runtimeconfig.json
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\CargoManagementService.dll
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\CargoManagementService.pdb
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.csproj.AssemblyReference.cache
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.AssemblyInfoInputs.cache
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.AssemblyInfo.cs
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.csproj.CoreCompileInputs.cache
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.dll
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\refint\CargoManagementService.dll
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.pdb
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\CargoManagementService.genruntimeconfig.cache
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\obj\Debug\net6.0\ref\CargoManagementService.dll
+C:\Users\sjgla\OneDrive\Desktop\Job Assignment\CargoManagementService\CargoManagementService\bin\Debug\net6.0\coding-assigment-orders.json
