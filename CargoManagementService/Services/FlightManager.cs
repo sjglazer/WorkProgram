@@ -27,5 +27,10 @@ namespace CargoManagementService.Services
                 flight.AddBox();
             }
         }
+
+        public IEnumerable<IFlight> GetOrderedFlights()
+        {
+            return _flights.OrderBy(flight => flight.DepartureTime).ThenBy(x => x.GetPlane().Id);
+        }
     }
 }

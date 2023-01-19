@@ -4,11 +4,11 @@ namespace CargoManagementService.Services
 {
     internal class Plane : IPlane
     {
-        private readonly int _id;
-        
+        public int Id { get; }
+
         public Plane(int id)
         {
-            _id = id;
+            Id = id;
         }
     }
 }

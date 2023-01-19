@@ -4,7 +4,9 @@ namespace CargoManagementService.Interfaces
 {
     internal interface IFlightManager
     {
-       void LoadBox(AirportEnum destination);
+        IEnumerable<IFlight> GetOrderedFlights();
+
+        void LoadBox(AirportEnum destination);
       
     }
 }
