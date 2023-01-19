@@ -70,6 +70,6 @@ namespace CargoManagementService.Services
 
         public List<Order> GetOrders()
         {
-            return _orders.OrderBy<order>(order => order.) 
+            return _orders.OrderBy<order>(order => order.Departur) 
     }
 }
