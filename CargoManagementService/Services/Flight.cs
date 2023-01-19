@@ -68,11 +68,6 @@ namespace CargoManagementService.Services
             return DayEnum;
         }
 
-        public List<Order> GetOrders()
-        {
-            return _orders.OrderBy(order => order.Name).ToList();
-        }
-
         public DateTime GetDepartureTime()
         {
             return DepartureTime;
