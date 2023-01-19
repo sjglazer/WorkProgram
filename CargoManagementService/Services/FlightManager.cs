@@ -1,40 +1,48 @@
 ﻿using CargoManagementService.Interfaces;
 using CargoManagementService.Models;
+using System.Collections.Concurrent;
+using CargoManagementService.Enums;
+using System.Collections.Generic;
 
 namespace CargoManagementService.Services
 {
     internal class FlightManager : IFlightManager
     {
-        // Definitely some concurrency issues here if we were in a 
-        // multi-threaded environment
-        private readonly List<Flight> _flights = new List<Flight>();
+        private readonly ConcurrentDictionary< (AirportEnum Departure, AirportEnum Arrival), List<IFlight>> _flights = new();
         private readonly List<Order> _notScheduledOrders = new List<Order>();
 
         public void AddFlight(Flight flight)
         {
-            _flights.Add(flight);
+            if (_flights.TryGetValue((flight.DepartureLocation, flight.DestinationLocation), out var flights))
+                flights.Add(flight);
+            else
+            {
+                var newFlightList = new List<IFlight>() { flight };
+                _flights.TryAdd((flight.DepartureLocation , flight.DestinationLocation), newFlightList);
+            }
         }
 
         public void LoadBox(Order order)
         {
-            // get the earliest available flight with room for the cargo and add the box
-            var flight =
-                _flights.Where(flight => flight.DestinationLocation == order.Destination && !flight.IsAtMaxCapacity())
-                .OrderBy(x => x.DepartureTime)
-                .FirstOrDefault();
-            
-            if(flight != null)
+            if (_flights.TryGetValue((order.Departure, order.Destination), out var flights))
             {
-                flight.AddOrder(order);
+
+                // get the earliest available flight with room for the cargo and add the box
+                var flightToLoad =
+                    flights.Where(flight => !flight.IsAtMaxCapacity())
+                        .MinBy(x => x.GetDepartureTime());
+
+                if (flightToLoad == null) return;
+                flightToLoad.AddOrder(order);
                 return;
             }
-
-            _notScheduledOrders.Add(order);
         }
 
-        public IEnumerable<IFlight> GetOrderedFlights()
-        {
-            return _flights.OrderBy(flight => flight.DepartureTime).ThenBy(x => x.GetPlane().Id);
-        }
-    }
+    public IEnumerable<IFlight> GetOrderedFlights()
+    {
+        var allFlights = _flights.Values.SelectMany(flights => flights)
+            .OrderBy(flight => flight.GetDepartureTime()).ThenBy(x => x.GetPlane().Id);
+
+        return allFlights;
+    } }
 }

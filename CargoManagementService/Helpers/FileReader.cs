@@ -33,7 +33,7 @@ namespace CargoManagementService.Helpers
                 {
                     if (Enum.TryParse<AirportEnum>(order.Value.Destination, out var destination))
                     {
-                        ret.Add(new Order(order.Key, destination));
+                        ret.Add(new Order(order.Key, AirportEnum.YUL, destination));
                     }
                 }
 

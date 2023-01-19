@@ -11,25 +11,24 @@ namespace CargoManagementService.Services
         public readonly DateTime DepartureTime;
         public readonly IPlane Plane;
         public readonly DayEnum DayEnum;
-        public readonly List<Order> _orders = new List<Order>();
-
+        
+        private readonly List<Order> _orders = new List<Order>();
         private readonly int _maxCapacity;
-        private int _currentCapacity;
+       
 
         public Flight(
             AirportEnum departureLocation,
-            AirportEnum desinationLocation,
+            AirportEnum destinationLocation,
             DateTime departureTime,
             IPlane plane,
             int maxCapacity,
             DayEnum dayEnum)
         {
             DepartureLocation = departureLocation;
-            DestinationLocation = desinationLocation;
+            DestinationLocation = destinationLocation;
             DepartureTime = departureTime;
             Plane = plane;
             _maxCapacity = maxCapacity;
-            _currentCapacity = 0;
             DayEnum = dayEnum;
         }
 
@@ -71,6 +70,11 @@ namespace CargoManagementService.Services
         public List<Order> GetOrders()
         {
             return _orders.OrderBy(order => order.Destination).ToList();
+        }
+
+        public DateTime GetDepartureTime()
+        {
+            return DepartureTime;
         }
     }
 }

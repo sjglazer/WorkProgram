@@ -1,8 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "wAKugpQ9bhXWFacGkt007zfwsZR/33Z9JPBoYU7F4MVoZjeFxoENGseINagfCHROpUxb8iKe0uyJE3bA/2LrLw==",
+  "dgSpecHash": "wW3pLU4z9/89qbPkaoxxSMNa1vEfqtFrYpsZx1uX1L/lmcT5+1dA44CvWTE6O0HsDlxXe+25tZ8J6qbEXW0OHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sjgla\\OneDrive\\Desktop\\WorkProgram\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\git_repos\\Docs\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stepheng\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.10\\microsoft.netcore.app.host.win-x64.6.0.10.nupkg.sha512",
+    "C:\\Users\\stepheng\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.10\\microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512",
+    "C:\\Users\\stepheng\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.10\\microsoft.windowsdesktop.app.ref.6.0.10.nupkg.sha512",
+    "C:\\Users\\stepheng\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.10\\microsoft.netcore.app.ref.6.0.10.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://devtools.pinnaclesports.com:81/nuget/Default'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://build.pinnaclesports.com/guestAuth/app/nuget/v1/FeedService.svc'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://devtools.pinnaclesports.com:81/nuget/Trading'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

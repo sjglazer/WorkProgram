@@ -8,27 +8,40 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sjgla\\.nuget\\packages\\": {}
+    "C:\\Users\\stepheng\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjgla\\OneDrive\\Desktop\\WorkProgram\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
+      "projectUniqueName": "D:\\git_repos\\Docs\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
       "projectName": "CargoManagementService",
-      "projectPath": "C:\\Users\\sjgla\\OneDrive\\Desktop\\WorkProgram\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
-      "packagesPath": "C:\\Users\\sjgla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sjgla\\OneDrive\\Desktop\\WorkProgram\\WorkProgram\\CargoManagementService\\obj\\",
+      "projectPath": "D:\\git_repos\\Docs\\WorkProgram\\CargoManagementService\\CargoManagementService.csproj",
+      "packagesPath": "C:\\Users\\stepheng\\.nuget\\packages\\",
+      "outputPath": "D:\\git_repos\\Docs\\WorkProgram\\CargoManagementService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sjgla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\stepheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "http://build.pinnaclesports.com/guestAuth/app/nuget/v1/FeedService.svc": {},
+        "http://devtools.pinnaclesports.com:81/nuget/Default": {},
+        "http://devtools.pinnaclesports.com:81/nuget/Trading": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/sportsbook-dev-rnd/748c4d10-33a7-40ee-bb1b-e51b5e272c94/_packaging/TradingBackend%40Local/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -56,13 +69,51 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://devtools.pinnaclesports.com:81/nuget/Default'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://build.pinnaclesports.com/guestAuth/app/nuget/v1/FeedService.svc'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://devtools.pinnaclesports.com:81/nuget/Trading'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

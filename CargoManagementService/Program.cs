@@ -45,32 +45,39 @@ flightManger.AddFlight(
 
 // Expected Output
 var flights = flightManger.GetOrderedFlights();
-foreach(var flight in flights)
+
+Console.WriteLine("Flight itinerary start:");
+Console.WriteLine();
+foreach (var flight in flights)
 {
     var output = $"Flight: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
     Console.WriteLine(output);
 }
+Console.WriteLine();
+Console.WriteLine("Flight itinerary end");
 
 // User Story #2 use input file to load cargo onto most recent flight avaialble
-var orders = FileReader.GetOrders("coding-assigment-orders.json");
+//var orders = FileReader.GetOrders("coding-assigment-orders.json");
 
-foreach(var order in orders )
-{
-    flightManger.LoadBox(order);
-}
+//foreach(var order in orders )
+//{
+//    flightManger.LoadBox(order);
+//}
 
-var loadedOrders = flightManger.GetOrderedFlights();
-foreach (var flight in flights)
-{
-    var output = $"Order: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
-    Console.WriteLine(output);
-}
+//var loadedOrders = flightManger.GetOrderedFlights();
+//foreach (var flight in flights)
+//{
+//    var output = $"Order: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
+//    Console.WriteLine(output);
+//}
 
 
 
 //foreach (var flight in flights)
 //{
 //    var output = $"order: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
+
+Console.Read();
 
 
 
