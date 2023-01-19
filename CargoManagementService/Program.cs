@@ -61,7 +61,7 @@ Console.WriteLine("Flight itinerary end");
 // get order from file
 var orders = FileReader.GetOrders("coding-assigment-orders.json");
 
-//load each or on the earliest flight available
+//load each order on the earliest flight available
 var ordersArray = orders as Order[] ?? orders.ToArray();
 foreach (var order in ordersArray)
 {
