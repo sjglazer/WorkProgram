@@ -51,13 +51,12 @@ Console.WriteLine("Flight itinerary start:");
 Console.WriteLine();
 foreach (var flight in flights)
 {
-    var output = $"Flight: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
-    Console.WriteLine(output);
+    Console.WriteLine(flight.ToString());
 }
 Console.WriteLine();
 Console.WriteLine("Flight itinerary end");
 
-// User Story #2 use input file to load cargo onto most recent flight avaialble
+// User Story #2 use input file to load cargo onto most recent flight available
 
 // get order from file
 var orders = FileReader.GetOrders("coding-assigment-orders.json");
@@ -86,14 +85,6 @@ foreach (var ordr in ordersArray)
 }
 Console.WriteLine();
 Console.WriteLine("Order summary end");
-
-
-
-
-//foreach (var flight in flights)
-//{
-//    var output = $"order: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
-
 Console.Read();
 
 

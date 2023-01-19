@@ -1,6 +1,7 @@
 ﻿using CargoManagementService.Enums;
 using CargoManagementService.Interfaces;
 using CargoManagementService.Models;
+using System.Xml.Linq;
 
 namespace CargoManagementService.Services
 {
@@ -81,6 +82,12 @@ namespace CargoManagementService.Services
         {
             return _orders.Any(currentOrder =>
                 string.Equals(currentOrder.Name, order.Name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public override string ToString()
+        {
+            return
+                $"Flight: {Plane.Id}, departure: {DepartureLocation}, arrival: {DestinationLocation}, Day: {(int)DayEnum}";
         }
     }
 }
