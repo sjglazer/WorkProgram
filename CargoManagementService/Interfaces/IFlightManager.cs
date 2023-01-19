@@ -1,4 +1,5 @@
 ﻿using CargoManagementService.Enums;
+using CargoManagementService.Models;
 
 namespace CargoManagementService.Interfaces
 {
@@ -6,7 +7,7 @@ namespace CargoManagementService.Interfaces
     {
         IEnumerable<IFlight> GetOrderedFlights();
 
-        void LoadBox(AirportEnum destination);
+        void LoadBox(AirportEnum destination, Order order);
       
     }
 }

@@ -2,6 +2,7 @@
 using CargoManagementService.Helpers;
 using CargoManagementService.Services;
 using CargoManagementService.Enums;
+using CargoManagementService.Interfaces;
 
 // Please Note:
 // For the sake of simplicity (and time) I did not code around future probable use cases such as:
@@ -50,15 +51,20 @@ foreach(var flight in flights)
     Console.WriteLine(output);
 }
 
+// User Story #2 use input file to load cargo onto most recent flight avaialble
+var orders = FileReader.GetOrders("coding-assigment-orders.json");
 
 
 
-//var orders = FileReader.GetOrders("coding-assigment-orders.json");
-//foreach (var order in orders)
-//{
-//    flightManger.LoadBox(order.Destination);
-//    Console.WriteLine(order.Name + " " + order.Destination);
-//}
+var loadesOrders = flightManger.GetOrderedFlights();
+foreach(var flight in flights)
+{
+    var output = $"Flight: {flight.GetPlane().Id}, departure: {flight.GetDepartureLocation()}, arrival: {flight.GetArrivalLocation()}, Day: {(int)flight.GetDayEnum()}";
+}
+
+Console.WriteLine(output);
+
+
 
 
 

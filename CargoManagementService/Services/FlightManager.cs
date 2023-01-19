@@ -1,7 +1,9 @@
 ﻿using CargoManagementService.Enums;
 using CargoManagementService.Interfaces;
-namespace CargoManagementService.Services
 
+using CargoManagementService.Models;
+
+namespace CargoManagementService.Services
 {
     internal class FlightManager : IFlightManager
     {
@@ -14,7 +16,7 @@ namespace CargoManagementService.Services
             _flights.Add(flight);
         }
 
-        public void LoadBox(AirportEnum destination)
+        public void LoadBox(AirportEnum destination, )
         {
             // get the earliest available flight with room for the cargo and add the box
             var flight =
@@ -24,7 +26,7 @@ namespace CargoManagementService.Services
             
             if(flight != null)
             {
-                flight.AddBox();
+                flight.AddOrder(order);
             }
         }
 

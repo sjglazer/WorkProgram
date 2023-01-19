@@ -7,7 +7,7 @@ namespace CargoManagementService.Interfaces
     {
         IPlane GetPlane();
         bool IsAtMaxCapacity();
-        void AddBox();
+        void AddOrder(Order  order);
         AirportEnum GetDepartureLocation();
         AirportEnum GetArrivalLocation();
         DayEnum GetDayEnum();

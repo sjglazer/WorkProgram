@@ -1,6 +1,6 @@
 ﻿using CargoManagementService.Enums;
 using CargoManagementService.Interfaces;
-
+using CargoManagementService.Models;
 
 namespace CargoManagementService.Services
 {
@@ -11,6 +11,7 @@ namespace CargoManagementService.Services
         public readonly DateTime DepartureTime;
         public readonly IPlane Plane;
         public readonly DayEnum DayEnum;
+        public readonly List<Order> _orders = new List<Order>();
 
         private readonly int _maxCapacity;
         private int _currentCapacity;
@@ -34,10 +35,10 @@ namespace CargoManagementService.Services
 
         public bool IsAtMaxCapacity()
         {
-            return _currentCapacity == _maxCapacity;
+            return _orders.Count == _maxCapacity;
         }
 
-        public void AddBox()
+        public void AddOrder( Order order)
         {
             if(IsAtMaxCapacity())
             {
