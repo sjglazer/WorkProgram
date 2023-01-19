@@ -17,7 +17,7 @@ namespace CargoManagementService.Services
         private int _currentCapacity;
 
         public Flight(
-            AirportEnum departureLocation, 
+            AirportEnum departureLocation,
             AirportEnum desinationLocation,
             DateTime departureTime,
             IPlane plane,
@@ -38,9 +38,9 @@ namespace CargoManagementService.Services
             return _orders.Count == _maxCapacity;
         }
 
-        public void AddOrder( Order order)
+        public void AddOrder(Order order)
         {
-            if(IsAtMaxCapacity())
+            if (IsAtMaxCapacity())
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -48,7 +48,7 @@ namespace CargoManagementService.Services
             _orders.Add(order);
         }
 
-       public IPlane GetPlane()
+        public IPlane GetPlane()
         {
             return Plane;
         }
@@ -70,6 +70,7 @@ namespace CargoManagementService.Services
 
         public List<Order> GetOrders()
         {
-            return _orders.OrderBy<order>(order => order.Departur) 
+            return _orders.OrderBy(order => order.Destination).ToList();
+        }
     }
 }
