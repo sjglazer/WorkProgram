@@ -1,5 +1,5 @@
 ﻿using CargoManagementService.Enums;
-using CargoManagementService.Services;
+using CargoManagementService.Models;
 
 namespace CargoManagementService.Interfaces
 {
@@ -7,9 +7,10 @@ namespace CargoManagementService.Interfaces
     {
         IPlane GetPlane();
         bool IsAtMaxCapacity();
-        void AddOrder(Order  order);
+        void AddOrder(Order order);
         AirportEnum GetDepartureLocation();
         AirportEnum GetArrivalLocation();
         DayEnum GetDayEnum();
+        List<Order> GetOrders();
     }
 }

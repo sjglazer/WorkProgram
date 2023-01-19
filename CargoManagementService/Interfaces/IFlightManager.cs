@@ -7,7 +7,7 @@ namespace CargoManagementService.Interfaces
     {
         IEnumerable<IFlight> GetOrderedFlights();
 
-        void LoadBox(AirportEnum destination, Order order);
+        void LoadBox(Order order);
       
     }
 }

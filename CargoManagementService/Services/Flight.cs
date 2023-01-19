@@ -44,8 +44,8 @@ namespace CargoManagementService.Services
             {
                 throw new ArgumentOutOfRangeException();
             }
-            
-            Interlocked.Increment(ref _currentCapacity);
+
+            _orders.Add(order);
         }
 
        public IPlane GetPlane()
@@ -67,5 +67,9 @@ namespace CargoManagementService.Services
         {
             return DayEnum;
         }
+
+        public List<Order> GetOrders()
+        {
+            return _orders.OrderBy<order>(order => order.) 
     }
 }
